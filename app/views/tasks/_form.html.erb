@@ -1,18 +1,15 @@
-<table summary="Task form fields">
-<tr>
-  <th>Name</th>
-  <td><%= f.text_field(:name) %></td>
-</tr>
-<tr>
-  <th>Position</th>
-  <td><%= f.text_field(:position) %></td>
-</tr>
-<tr>
-  <th>Completed</th>
-  <td><%= f.check_box(:completed) %></td>
-</tr>
-<tr>
-  <th>Description</th>
-  <td><%= f.text_area(:description) %></td>
-</tr>
-</table>
+<form class='mx-auto'>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <%= f.text_field(:name, class: "form-control", id: "name") %>
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <%= f.text_area(:description, class: "form-control", id: "description") %>
+  </div>
+  <div class="mb-3 form-check">
+  <%= f.check_box(:completed, class: "form-check-input", id: "completed") %>
+  <label class="form-check-label" for="completed">Completed</label>
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
