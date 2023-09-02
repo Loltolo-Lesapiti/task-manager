@@ -1,17 +1,22 @@
-<%= link_to("Back to List", tasks_path, class: 'back-link') %>
+<%= link_to("Back to List", tasks_path, class: 'btn btn-secondary mb-3') %>
 
-<div class="tasks delete">
-  <h2>Delete Task</h2>
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Delete Task</h2>
 
-  <%= form_for(@task, method: 'delete') do |f| %>
-    <% # url: task_path(@task), method: 'delete' %>
+          <%= form_for(@task, method: 'delete', html: { class: 'form' }) do |f| %>
+            <p class="lead">Are you sure you want to permanently delete this task?</p>
+            <p><strong><%= @task.name %></strong></p>
 
-    <p>Are you sure you want to permanently delete this task?</p>
-    <p><%= @task.name %></p>
-
-    <div class="form-buttons">
-      <%= f.submit("Delete Task") %>
+            <div class="form-group">
+              <%= f.submit("Delete Task", class: 'btn btn-danger') %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-
-  <% end %>
+  </div>
 </div>
