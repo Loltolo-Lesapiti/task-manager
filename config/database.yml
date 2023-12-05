@@ -32,7 +32,7 @@ development:
   username: postgres
 
   # The password associated with the postgres role (username).
-  password: Admin123
+  password: Admin2023!!
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -59,7 +59,7 @@ test:
   <<: *default
   database: task_manager_test
   username: postgres
-  password: Admin123
+  password: Admin2023!!
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,4 +85,4 @@ production:
   <<: *default
   database: task_manager_production
   username: postgres
-  password: Admin123
+  password: Admin2023!!
