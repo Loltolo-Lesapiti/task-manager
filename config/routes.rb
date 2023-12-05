@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
-  # get 'categories/index'
-  # get 'categories/show'
-  # get 'categories/new'
-  # get 'categories/delete'
-  # get 'categories/edit'
   resources :tasks do
     member do
       get :delete
     end
   end
-  root 'main#index'
+  root 'tasks#index'
   # get 'main/index'
   # get 'tasks/index'
   # get 'tasks/new'
@@ -21,7 +16,7 @@ Rails.application.routes.draw do
       get :delete
     end 
   end 
-  match 'about', to: 'main#about', via: :get
+  match 'about', to: 'tasks#about', via: :get
   # Defines the root path route ("/")
   # root "articles#index"
 end
